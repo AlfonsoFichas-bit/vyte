@@ -1,13 +1,13 @@
 ## 1. Base y dependencias
 
-- [ ] 1.1 Quitar `@fluentui/web-components` y añadir `@fluentui/react-components` y `@fluentui/react-icons`
-- [ ] 1.2 Añadir `@plasmohq/messaging`, `music-metadata`, `idb` y `zustand`
-- [ ] 1.3 Quitar `host_permissions` y añadir `permissions` (`storage`, `unlimitedStorage`, `offscreen`) y `commands` en `package.json`
-- [ ] 1.4 Envolver la app en `FluentProvider` con tema claro/oscuro según el sistema
-- [ ] 1.5 Crear `tabs/player.tsx` como shell de la ventana (biblioteca + barra de reproducción)
-- [ ] 1.6 Crear `background.ts` que abra la ventana con `chrome.windows.create({ type: "popup" })` y enfoque la existente si ya está abierta
-- [ ] 1.7 Convertir `popup.tsx` en un botón "Abrir reproductor"
-- [ ] 1.8 Verificar la fase con `bun run build` y `bun run check`
+- [x] 1.1 Quitar `@fluentui/web-components` y añadir `@fluentui/react-components` y `@fluentui/react-icons`
+- [x] 1.2 Añadir `@plasmohq/messaging`, `music-metadata`, `idb` y `zustand`
+- [x] 1.3 Quitar `host_permissions` y añadir `permissions` (`storage`, `unlimitedStorage`, `offscreen`) y `commands` en `package.json`
+- [x] 1.4 Envolver la app en `FluentProvider` con tema claro/oscuro según el sistema
+- [x] 1.5 Crear `tabs/player.tsx` como shell de la ventana (biblioteca + barra de reproducción)
+- [x] 1.6 Crear `background.ts` que abra la ventana con `chrome.windows.create({ type: "popup" })` y enfoque la existente si ya está abierta
+- [x] 1.7 Convertir `popup.tsx` en un botón "Abrir reproductor"
+- [x] 1.8 Verificar la fase con `bun run build` y `bun run check`
 
 ## 2. Librería local
 
