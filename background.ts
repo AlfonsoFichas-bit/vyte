@@ -40,3 +40,26 @@ chrome.windows.onRemoved.addListener((windowId) => {
     playerWindowId = null
   }
 })
+
+async function setupOffscreenDocument(path: string) {
+  if (await chrome.offscreen.hasDocument()) return
+
+  await chrome.offscreen.createDocument({
+    url: path,
+    reasons: [chrome.offscreen.Reason.AUDIO_PLAYBACK],
+    justification: "To play music continuously in the background"
+  })
+}
+
+// Create offscreen document when service worker starts
+setupOffscreenDocument("tabs/offscreen.html")
+
+chrome.commands.onCommand.addListener((command) => {
+  if (command === "play-pause") {
+    chrome.runtime.sendMessage({ action: "play-pause-toggle" })
+  } else if (command === "next-track") {
+    chrome.runtime.sendMessage({ action: "playback-ended" }) // Triggers next
+  } else if (command === "prev-track") {
+    chrome.runtime.sendMessage({ action: "prev-track" })
+  }
+})

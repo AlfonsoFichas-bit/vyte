@@ -6,6 +6,7 @@
     "paths": {
       "~*": ["./*"]
     },
+    "types": ["chrome", "node", "@types/wicg-file-system-access"],
     "baseUrl": "."
   }
 }
